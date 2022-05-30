@@ -33,6 +33,8 @@ services:
       MYSQL_DATABASE: ${DB_MYSQL_NAME}
       MYSQL_USER: ${DB_MYSQL_USER}
       MYSQL_PASSWORD: ${DB_MYSQL_PASSWORD}
+    ports:
+      - '${DB_MYSQL_PORT}:3306'
     volumes:
       - mysql_data:/var/lib/mysql
     restart: always
