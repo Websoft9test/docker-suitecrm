@@ -25,7 +25,7 @@ services:
       - mysql
 
   mariadb:
-    image: mariadb:${DB_MYSQL_VERSION}
+    image: docker.io/bitnami/mariadb:${DB_MYSQL_VERSION}
     container_name: ${APP_NAME}-db 
     environment:
       MARIADB_ROOT_PASSWORD: ${DB_MYSQL_PASSWORD}
