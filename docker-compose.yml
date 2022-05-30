@@ -22,7 +22,7 @@ services:
     volumes:
       - 'suitecrm:/bitnami/suitecrm'
     depends_on:
-      - mysql
+      - mariadb
 
   mariadb:
     image: docker.io/bitnami/mariadb:${DB_MYSQL_VERSION}
