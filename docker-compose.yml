@@ -28,6 +28,7 @@ services:
     image: mariadb:${DB_MYSQL_VERSION}
     container_name: ${APP_NAME}-db 
     environment:
+      MARIADB_ROOT_PASSWORD: ${DB_MYSQL_PASSWORD}
       MARIADB_DATABASE: ${DB_MYSQL_NAME}
       MARIADB_USER: ${DB_MYSQL_USER}
       MARIADB_PASSWORD: ${DB_MYSQL_PASSWORD}
