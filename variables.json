@@ -1,7 +1,7 @@
 {
   "name": "suitecrm",
   "trademark": "SuiteCRM",
-  "installpath": "/data/wwwroot/suitecrm",
+  "installpath": "/data/apps/suitecrm",
   "compose_file": "docker-compose.yml",
   "fork_url": "https://github.com/bitnami/bitnami-docker-suitecrm",
   "env_file": ".env",
