@@ -18,7 +18,7 @@ services:
       - SUITECRM_USERNAME=${APP_USER}
       - SUITECRM_PASSWORD=${APP_PASSWORD}
       - SUITECRM_EMAIL=${APP_EMAIL}
-      - SUITECRM_SKIP_BOOTSTRAP=no
+      - SUITECRM_SKIP_BOOTSTRAP=yes
     volumes:
       - 'suitecrm:/bitnami/suitecrm'
     depends_on:
