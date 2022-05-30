@@ -18,21 +18,19 @@ services:
       - SUITECRM_USERNAME=${APP_USER}
       - SUITECRM_PASSWORD=${APP_PASSWORD}
       - SUITECRM_EMAIL=${APP_EMAIL}
-      - ALLOW_EMPTY_PASSWORD=yes
     volumes:
       - 'suitecrm:/bitnami/suitecrm'
     depends_on:
       - mariadb
 
   mariadb:
-    image: docker.io/bitnami/mariadb:${DB_MYSQL_VERSION}
+    image: mariadb:${DB_MYSQL_VERSION}
     container_name: ${APP_NAME}-db 
     environment:
       - MARIADB_ROOT_PASSWORD=${DB_MYSQL_PASSWORD}
       - MARIADB_DATABASE=${DB_MYSQL_NAME}
       - MARIADB_USER=${DB_MYSQL_USER}
       - MARIADB_PASSWORD=${DB_MYSQL_PASSWORD}
-      - ALLOW_EMPTY_PASSWORD=yes
     ports:
       - '${DB_MYSQL_PORT}:3306'
     volumes:
