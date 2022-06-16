@@ -20,7 +20,7 @@ services:
       - SUITECRM_PASSWORD=${APP_PASSWORD}
       - SUITECRM_EMAIL=${APP_EMAIL}
     volumes:
-      - 'suitecrm:/bitnami/suitecrm'
+      - suitecrm:/bitnami/suitecrm
     depends_on:
       - mariadb
 
